@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git : 'https://github.com/kimheesang97/test.git'
+                // Git 리포지토리에서 소스 코드를 체크아웃
+                git url: 'https://github.com/kimheesang97/test.git', branch: 'main'
             }
         }
         stage('Build') {
