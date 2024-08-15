@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Git 리포지토리에서 특정 브랜치를 체크아웃
-                git branch: 'main', url: 'https://github.com/kimheesang97/test.git'
+                git : 'https://github.com/kimheesang97/test.git'
             }
         }
         stage('Build') {
