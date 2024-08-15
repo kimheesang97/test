@@ -4,8 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                // Git 리포지토리에서 특정 브랜치를 체크아웃
-                git : 'https://github.com/kimheesang97/test.git'
+                git branch: 'main', url: 'https://github.com/kimheesang97/test.git'
             }
         }
         stage('Build') {
@@ -33,5 +32,8 @@ pipeline {
             echo 'Build succeeded!'
         }
         failure {
-            echo 
+            echo 'Build failed.'
+        }
+    }
+}
 
